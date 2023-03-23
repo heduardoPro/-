@@ -192,15 +192,14 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <p>
+          <span id="contador">0</span>
+        </p>
       </div>
     </div>
   </footer><!-- End  Footer -->
@@ -221,6 +220,12 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    var contador = localStorage.getItem("contador") || 0;
+    contador++;
+    localStorage.setItem("contador", contador);
+    document.getElementById("contador").innerHTML = contador;
+  </script>
 </body>
 
 </html>
